@@ -14,7 +14,7 @@ const Moreoption = ({ post }) => {
 
   const deletePostHandler = async () => {
     try {
-      const res = await axios.delete(`http://localhost:8000/api/v1/post/delete/${post?._id}`, {withCredentials: true});
+      const res = await axios.delete(`https://friendschat-7iht.onrender.com/api/v1/post/delete/${post?._id}`, {withCredentials: true});
       console.log('res mila', res);
       if(res.data.success){
         const updatedPostData = posts.filter((postItem) => postItem?._id !== post?._id);

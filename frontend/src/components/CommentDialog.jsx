@@ -34,7 +34,7 @@ const CommentDialog = ({ open, setOpen }) => {
     try {
       const action = liked ? "dislike" : "like";
       const res = await axios.get(
-        `http://localhost:8000/api/v1/post/${selectedPost._id}/${action}`,
+        `https://friendschat-7iht.onrender.com/api/v1/post/${selectedPost._id}/${action}`,
         { withCredentials: true }
       );
 
@@ -74,7 +74,7 @@ const CommentDialog = ({ open, setOpen }) => {
   const sendMessageHandler = async () => {
     try {
       const res = await axios.post(
-        `http://localhost:8000/api/v1/post/${selectedPost?._id}/comment`,
+        `https://friendschat-7iht.onrender.com/api/v1/post/${selectedPost?._id}/comment`,
         { text },
         {
           headers: {
